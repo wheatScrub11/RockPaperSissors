@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;700&family=Rubik:ital,wght@1,300&display=swap');
+
+*{
+    font-family: "Red Hat Display";
+}
+
+
 body{
     height: 100vh;
     width: 100vw;
@@ -7,18 +14,118 @@ body{
 }
 
 .box{
-    background-color: tomato;
+    background-color: #F9EDCC;
     border-radius: .5em;
+    width: 1000px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, 200px);
+    gap: 70px;
+    padding: 2em;
+    column-gap: 30px;
 }
 
-.text{
-    color: black;
-    font-size: 80px;
-    padding: 0 1em;
-    font-family: sans-serif;
+.btn{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
 }
 
-code{
-    background-color: rgb(31, 24, 24);
-    color: wheat;
+.btn.rock{
+    background-color: #EA2B1F;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.btn.paper{
+    background-color: #EDAE49;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.btn.scissors{
+    background-color: #F9DF74;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.box-2{
+    background-color: #1982C4;
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    border-radius: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.thePlayerScore{
+    width: 50%;
+    height: 150px;
+    background-color: #8AC926;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titlez-1{
+    font-size: 2.5rem;
+}
+.yourScore{
+    font-size: 2.8rem;
+}
+
+.theComputerScore{
+    width: 50%;
+    height: 150px;
+    background-color: #FF595E;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titlez-2{
+    font-size: 2.3rem;
+}
+.computerScore{
+    font-size: 2.8rem;
+}
+
+
+.theResult{
+    background-color: white;
+    height: calc(100% - 200px);
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.btn:hover{
+    animation: tra 150ms forwards ease-in;
+    
+}
+
+@keyframes tra{
+    0%{
+
+    }
+    100%{
+        border: 5px solid black;
+        background-color: #c2a2ee;
+        cursor: pointer;
+    }
 }
